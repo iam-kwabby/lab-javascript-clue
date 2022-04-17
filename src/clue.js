@@ -171,7 +171,12 @@ function pickMystery() {
 
 // ITERATION 3
 
-function revealMystery() {}
+function revealMystery(envelope) {
+  let killer = envelope().suspect.toUpperCase().split(" ")
+
+  return `<${killer[0]}><${killer[1]}> killed Mr. Boddy using the <${envelope().weapon.toUpperCase()}> in the <${envelope().room.toUpperCase()}>!`
+
+}
 
 
 
