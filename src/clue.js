@@ -159,7 +159,14 @@ function selectRandom(arr) {
 
 }
 
-function pickMystery() {}
+function pickMystery() {
+  let mystery = {
+    suspect: selectRandom(suspectsArray).firstName + " "+ selectRandom(suspectsArray).lastName,
+    weapon: selectRandom(weaponsArray).name,
+    room: selectRandom(roomsArray).name,
+  }
+  return mystery
+}
 
 
 // ITERATION 3
